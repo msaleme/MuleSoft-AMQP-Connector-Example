@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:amqp="http://www.mulesoft.org/schema/mule/amqp" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/amqp http://www.mulesoft.org/schema/mule/amqp/current/mule-amqp.xsd">
+	<flow name="amqp-connectorFlow" doc:id="b53f5b1b-5432-4636-a788-65f862a0837b" >
+		<amqp:listener doc:name="Listener" doc:id="abd12db6-ab61-454f-a87c-6a99d33725bb" />
+	</flow>
+	<flow name="amqp-connectorFlow2" doc:id="b6f245f4-ee9f-4787-894d-331a7e91c294" >
+		<amqp:consume doc:name="Consume" doc:id="d7c70108-d4f0-44d9-b105-e5131acd55f1" />
+		<amqp:ack doc:name="Ack" doc:id="a87b8729-a9f0-46c4-9e1d-7520fbf2620f" />
+	</flow>
+	<flow name="amqp-connectorFlow3" doc:id="7a4a98e5-8c03-4fa8-881b-2fdf7ccf84b0" >
+		<amqp:reject doc:name="Reject" doc:id="9ae608df-bc7a-471c-955a-d24ad465e6a4" />
+	</flow>
+	<flow name="amqp-connectorFlow1" doc:id="497943aa-7600-4b2c-a729-d894be213ec7" >
+		<amqp:publish-consume doc:name="Publish consume" doc:id="f882fdb5-3e95-4fb6-8bb7-cace1fe6e72b" />
+	</flow>
+</mule>
